@@ -3,13 +3,31 @@ CREATE DATABASE chat;
 USE chat;
 
 CREATE TABLE messages (
-  /* Describe your table here.*/
+  text varchar(255),
+  username varchar(11),
+  roomname varchar(255),
+  createdAt date,
+  ID int(11) NOT NULL auto_increment,
+  PRIMARY KEY (ID)
 );
 
 /* Create other tables and define schemas for them here! */
+CREATE TABLE rooms (
+ roomname varchar(40),
+  ID int(11) NOT NULL auto_increment,
+  PRIMARY KEY (ID)
+);
 
+CREATE TABLE users (
+  name varchar(40),
+  ID int(11) NOT NULL auto_increment,
+  PRIMARY KEY (ID)
+);
 
-
+CREATE TABLE user_and_room (
+  user_id int(11),
+  room_id int(11)
+)
 
 /*  Execute this file from the command line by typing:
  *    mysql < schema.sql
