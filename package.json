@@ -7,7 +7,9 @@
     "chai": "^1.9.1",
     "mocha": "^1.21.4",
     "mysql": "^2.5.1",
-    "request": "^2.40.0"
+    "request": "^2.40.0",
+    "sequelize": "^2.0.0-rc1",
+    "underscore": "^1.7.0"
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha -R dot ORM_Refactor/spec/LiveSpec.js"

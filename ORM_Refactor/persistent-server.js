@@ -1,7 +1,3 @@
-
-/* You already know how to create an http server from the previous
- * assignment; you can re-use most of that code here. */
-
 var http = require("http");
 var url = require('url');
 
@@ -27,7 +23,8 @@ var router = function(req, res) {
       handlers.sendOptionsResponse(req, res);
     }
   } else {
-    handlers.sendResponse(res, '', 404);
+    console.log()
+    serverHelpers.sendResponse(res, '', 404);
   }
 };
 
@@ -35,4 +32,3 @@ var server = http.createServer(router);
 
 console.log("Listening on http://" + ip + ":" + port);
 server.listen(port, ip);
-
