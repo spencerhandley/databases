@@ -1,8 +1,3 @@
-/* You'll need to
- * npm install sequelize
- * before running this example. Documentation is at http://sequelizejs.com/
- */
-
 var Sequelize = require("sequelize");
 var sequelize = new Sequelize("chatter", "root", "YOUR_PASSWORD");
 /* TODO this constructor takes the database name, username, then password.
@@ -14,7 +9,7 @@ var User = sequelize.define('User', {
   username: Sequelize.STRING
 });
 
-var Message = sequelize.define('Message', {
+var Message = sequelize.define('Message' {
   userid: Sequelize.INTEGER,
   text: Sequelize.STRING,
   roomname: Sequelize.STRING
@@ -30,7 +25,7 @@ User.sync().success(function() {
   newUser.save().success(function() {
 
   })
-     // This callback function is called once saving succeeds.
+    /* This callback function is called once saving succeeds. */
 
     // Retrieve objects from the database:
     User.findAll({ where: {username: "Jean Valjean"} }).success(function(users) {
@@ -41,7 +36,7 @@ User.sync().success(function() {
     });
 
   });
-// });
+});
 
 exports.findAllMessages = function(cb){
   Message.findAll().success(function(messages){

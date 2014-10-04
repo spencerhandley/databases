@@ -36,10 +36,7 @@ exports.saveUser = function(username, cb){
 };
 
 exports.saveMessage = function(message, userid, roomname, cb){
-  console.log("save")
   dbConnection.query('INSERT INTO messages SET ?', {text: message, username: userid, roomname: roomname, createdAt: new Date()} , function(err, result){
-    console.log("save err",err)
-    console.log("save result",result)
     cb(err, result);
   });
 };
